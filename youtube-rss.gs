@@ -150,7 +150,7 @@ function jsonToRss(items, feed) {
           var title = htmlentities(items[i].videoTitle);
           var date = new Date(items[i].videoPublishedAt);
           var id = items[i].videoId;
-          var description = htmlentities(items[i].videoDescription);
+          var description = htmlentities(items[i].videoDescription) + ' </br> <iframe width="560" height="315" src="https://www.youtube.com/embed/'+items[i].videoId+'" frameborder="0" allowfullscreen></iframe>';
                     
           rss += "  <item>"+"\n"
           rss += "   <title>" + channelTitle + ": " + title + "</title>"+"\n";
